@@ -1,0 +1,68 @@
+body {
+    height:100%;
+    background-color: #f2f2f2;
+    position: fixed;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: 0em;
+    fill: currentColor;
+    overflow: hidden;
+    line-height: 46px;
+}
+.fixdibu {
+    background-color: white;
+    height: 46px;
+}
+.div5 {
+    width: 19.9%;
+    float: left;
+}
+#icon-tianjia path {
+    fill: #fade62;
+}
+#icon-tubiaozhizuomoban path {
+    fill:#bedebc;
+}
+.icon-tianjia {
+    width: 40px;
+    height: 40px;
+}
+.icon-fenxianglicaichengjiu {
+    width: 40px;
+    height: 40px;
+}
+.icon-tubiaozhizuomoban {
+    width: 40px;
+    height: 40px;
+}
+.icon-fenxianglicaichengjiu {
+    width: 40px;
+    height: 40px;
+}
+.icon-wo{
+    width: 40px;
+    height: 40px;
+}
+.dibu{
+    height: auto;
+}
+a{
+    color: black;
+}
+.row1{
+    background-color: #2aa094;
+    height: 50px;
+}
+@media(min-width: 62em){
+    .fixdibu{
+        display: none;
+    }
+    .phonetop{
+        display: none;
+    }
+}
+.zi{
+    line-height: 50px;
+}
