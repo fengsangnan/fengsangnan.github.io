@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="GET">
+    <meta name="author" content="第五组">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="../favicon.ico">
+    <title>职业查找</title>
+    <link href="../cpnts/bootstrap4.0.0/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles/02zhiyechazhao.css" rel="stylesheet">
+    <script src="../cpnts/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../scripts/bootstrap-typeahead.js"></script>
+    <script src="../scripts/02zhiyechazhao.js"></script>
+</head>
+<body>
+<div class="container-fluid" style="padding-bottom: 60px">
+    <div class="row row1 fixed-top">
+        <div class="col-12">
+            <!--“更多”导航栏-->
+            <h5 class="text-white text-center zi phonetop" style="margin: 0px">职业查找</h5>
+        </div>
+    </div>
+    <div class="row row2" style="margin-top: 50px">
+        <div class="col-xs-1 col-md-2"></div>
+        <div class="col-xs-10 col-md-8 bg-white">
+            <div class="form-group">
+                <label class="sr-only" for="demo2">职业搜索</label>
+                <input id="demo2" type="text" class="form-control" placeholder="请输入你意向的职业" autocomplete="off" style="margin: 10px">
+                <span class="input-group-addon icon-sousuo">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-sousuo"></use>
+                    </svg>
+                </span>
+            </div>
+        </div>
+        <div class="col-xs-1 col-md-2"></div>
+    </div>
+    <div class="row row3">
+        <div class="col-xs-1 col-md-2"></div>
+        <div class="col-xs-10 col-md-8 bg-white">
+            <div class="media">
+                <img src="../images/zhiye.PNG" alt="产品经理">
+                <div class="media-body">
+                    <br>
+                    <h6 class="mt-0">产品经理职位简介<small><br><br>阿里巴巴、腾讯等企业提供招聘信息</small></h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-1 col-md-2"></div>
+    </div>
+    <div class="row row4 hidden-lg-up">
+        <div class="col-xs-1 col-md-2"></div>
+        <div class="col-xs-10 col-md-8 bg-white">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">职位详细信息</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="ability-tab" data-toggle="tab" href="#ability" role="tab" aria-controls="ability" aria-selected="false">职业所需能力</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="workContent-tab" data-toggle="tab" href="#workContent" role="tab" aria-controls="workContent" aria-selected="false">主要工作内容</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="avgWage-tab" data-toggle="tab" href="#avgWage" role="tab" aria-controls="avgWage" aria-selected="false">平均工资薪酬</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
+                    <p style="margin-top: 15px">产品经理(Product Manager)是企业中专门负责产品管理的职位，产品经理负责市场调查并根据用户的需求，确定开发何种产品，选择何种技术、商业模式等。并推动相应产品的开发组织，他还要根据产品的生命周期，协调研发、营销、运营等，确定和组织实施相应的产品策略，以及其他一系列相关的产品管理活动。</div></p>
+                <div class="tab-pane fade" id="ability" role="tabpanel" aria-labelledby="ability-tab">
+
+                    <p class="text-info"> 1、一个成功的产品经理的能力中应该有35%的项目管理能力。</p>
+                    <p >在项目管理方面，而且这35%的能力包括团队合作的能力。好的产品经理首先是成功的项目经理，项目管理的经验对于产品经理十分重要，可以帮助产品经理更好的进行产品的管理，团队合作的经验和能力可以让产品经理在产品的团队比较好的处理团队内部的人员关系和团队的其他情况。</p>
+
+                    <p class="text-info"> 2、个人的能力占15%。 </p>
+                    <p >成功的产品经理应该是成功的领导人，他的个人能力包括他的领导能力，个人的情况和能力以及他的个人的亲和力。个人的能力可以帮助产品经理更好进行产品过程的管理。</p>
+
+                    <p class="text-info"> 3、产品经理的业务能力占全部的20%。</p>
+                    <p >产品经理的业务能力包括专业的业务管理技能。</p>
+
+                    <p class="text-info"> 4、产品经理的技术能力占全部的15%。 </p>
+                    <p >技术能力对于产品经理是必备的技能，技术能力让产品经理更好的理解产品的性能和特点，更好的进行产品的团队管理。</p>
+
+                    <p class="text-info"> 5、产品经理的沟通和处理冲突的能力占全部的15%。 </p>
+                    <p >产品经理应该领导项目组，指导产品从概念设计到市场接受，保证实现设计、收益、市场份额和利润目标，解决项目组的冲突;同时产品经理还应该管理项目，制定项目的计划和预算，确定和管理参与项目的人员和资源，同职能部门之间相协调，跟踪相对于项目基线的进展;产品经理还要负责和管理层进行沟通，提供项目进展状况的报告，准备并且确定状态评审点，作为产品的领导同管理层沟通，提供对项目组 成员的工作绩效评审的输入材料。</p>
+                    </div>
+                <div class="tab-pane fade" id="workContent" role="tabpanel" aria-labelledby="workContent-tab">
+                    <ul class="nav">
+                        <div id="accordion" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading1">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapseOne">
+                                            <span class="h6 text-info">1、市场调研与分析</span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading1">
+                                    <p>1.1了解市场需求<br>
+                                        与潜在用户交流尝试能否获取需求（他需要许愿不？他需要交换礼物不？）<br>
+                                        明确存在于该机会中目标用户群体与特征（年龄、收入、性别、心理特征等）<br>
+                                        与直接面对客户的一线同事交流，如销售、技术、运营、市场、技术支持等<br>
+                                        获取、分析、评估用户的需求<br>
+                                        需求的收集<br>
+                                        需求的分析评估<br>
+                                        ——是否迫切<br>
+                                        ——是否强烈<br>
+                                        ——是否高频<br>
+                                        1.2分析竞争状况<br>
+                                        市场报告<br>
+                                        行业文章<br>
+                                        使用竞争对手的产品<br>
+                                        1.3自身资源与满足用户需求的匹配程度<br>
+                                        技术资源（是否有技术储备，案例：微信与米聊）<br>
+                                        (1)是否存在技术资源<br>
+                                        (2)是否需要技术预研<br>
+                                        市场资源（媒体资源，推广渠道，公关资源等）<br>
+                                        运营资源（现有团队能否支撑可能发生的用户需求和与之对应的其他需求）<br>
+                                        1.4该阶段目标<br>
+                                        发现创新产品的机会<br>
+                                        返现改进现有产品的机会<br>
+                                        1.5该阶段输出文档，根据汇报对象与实际情况<br>
+                                        （1）商业需求文档BRD（Business Requirement Document）<br>
+                                        lBRD你要给产品、运营、研发、管理层等很多人看，要讲清楚为什么有这个需求，需求的边界和业务目标，所需资源等；<br>
+                                        （2）市场需求文档MRD（Market  Requirement Document）<br>
+                                        lMRD给产品、运营、研发等业务线上的人看，主要是大家已经一致认可需求是成立的，只是我们如何来实现，什么时间实现需求，实现了需求会获取什么结果；<br>
+                                        1.6给阶段注意事项<br>
+                                        鞋子的故事<br>
+                                        大胆设想，小心求证<br>
+                                        切勿陷入自己营造的主观主义情绪中<br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading2">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
+                                            <span class="h6 text-info">2、产品的规划定义与产品设计</span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
+                                    <p>2.1产品的规划定义—把产品讲清楚，是市场调研后产品抽象的过程与结果<br>
+                                        （1）产品愿景，团队为之去努力的目标与反向<br>
+                                        迪斯尼的愿景：让人们快乐<br>
+                                        星巴克：人们工作和家庭外的第三生活空间<br>
+                                        （2）目标市场（互联网产品主要是指目标用户群体与群体关联的位置）<br>
+                                        网络游戏的一级城市与二级城市布局<br>
+                                        （3）竞争分析<br>
+                                        供团队成员参考与理解<br>
+                                        （4）产品功能与详细描述<br>
+                                        （5）产品功能的优先级<br>
+                                        （6）产品用例（Use Case，主要用于更方便的人、团队成员理解你的想法）<br>
+                                        （7）性能需求（最大并发数，同时在线人数峰值，峰值系统响应时间等，百度的响应速度）<br>
+                                        （8）其他部门支持需求（市场、运营、技术、销售等）<br>
+                                        2.2产品设计—把产品想清楚，是产品定以后的具体表现<br>
+                                        需求>用户体验>交互>UI<br>
+                                        （1）明确产品调性（微信启动界面、陌陌、Google、豆瓣）<br>
+                                        品牌调性，是基于品牌的外在表现而形成的市场印象，从品牌人格化的模式来说，等同于人的性格。<br>
+                                        品牌调性并不显化，常常匿形于具体的品牌表现中，但品牌调性对品牌成败的影响程度远远超出常人的想象。品牌调性如果违背了行业属性，这个品牌就无法走远，这是自由市场的潜规则，不为个人的意志而转移。举个例子，星巴克咖啡，它给人的品牌调性就是舒适，休闲、自由，而这种品牌调性是通过它店内的装饰、服务、产品等多方面的因素传达出来的。<br>
+                                        品牌调性的内涵大致从以下内容体现：<br>
+                                        1、品牌属性<br>
+                                        2、品牌个性<br>
+                                        3、品牌文化<br>
+                                        4、品牌价值<br>
+                                        5、品牌使用者<br>
+                                        （2）用户体验设计（UED、User Experience Design）<br>
+                                        交互设计（Interaction Designer）<br>
+                                        用户体验设计（User Experience Design）<br>
+                                        用户界面设计（User Interface Design）<br>
+                                        前端开发工程（Web Developer）<br>
+                                        2.3输出文档<br>
+                                        产品信息架构图<br>
+                                        产品原型图<br>
+                                        产品需求文档（PRD，Product Requirement Document）<br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading3">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="h6 text-info">3、产品研发过程中的项目管理</span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
+                                    <p>3.1与各团队充分有效的沟通，协调资源保证产品按照既定目标正确前进<br>
+                                        协作并确保各方都按照既定目标前进<br>
+                                        和研发沟通合作，确定产品的基本时间节点<br>
+                                        产品开发过程中，与项目经理协作，跟踪产品开发进度<br>
+                                        与公司高层及时沟通，汇报产品开发过程中的各种问题、进度、困难、协作资源<br>
+                                        及时与各团队通报产品进度，确保信息对等<br>
+                                        3.2需求管理<br>
+                                        新需求<br>
+                                        变更需求<br>
+                                        3.3本阶段目标<br>
+                                        产品测试并验收完成<br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading4">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse4" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="h6 text-info">4、产品宣讲</span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading4">
+                                    <p>《产品经理的自我修炼》、《人人都是产品经理》、《神一样的产品经理》<br>
+                                        4.1为什么要产品宣讲<br>
+                                        前期的产品立意，市场分析，需求等，都是产品团队与研发团队在主要参与，进入研发阶段，根据产品实际情况一般会在合适的时候让其他相关团队开始了解产品，到这个时候，一般就需要对产品进行内部的宣讲。<br>
+                                        4.2主要宣讲对象<br>
+                                        客服<br>
+                                        市场<br>
+                                        销售<br>
+                                        运营<br>
+                                        其他......<br>
+                                        4.3产品宣讲的目的<br>
+                                        内部培训，让团队成员熟知产品特性与调性<br>
+                                        获得认可<br>
+                                        统一愿景<br>
+                                        激励士气<br>
+                                        获取信任支持<br>
+                                        4.4从不同部门看产品宣讲对其意义与作用（拿捏）<br>
+                                        客服：有利于客服人员更好的组织与理解接下来的工作，包括客户问答等处理流程<br>
+                                        市场：明白产品，有利于市场人员更为提前的准备他们的推广战略战术，如何包装产品等<br>
+                                        销售：明白产品，有利于销售人员提前和现有客户沟通，做好销售预热准备<br>
+                                        运营：明白产品，能更好的让运营人员参与到产品中来，提前理解产品功能，减少后期沟通障碍与成本<br>
+                                        4.5产品宣讲方式<br>
+                                        （1）产品内部推荐会<br>
+                                        前景预测<br>
+                                        产品演示<br>
+                                        产品试用<br>
+                                        （2）注意控制<br>
+                                        气氛<br>
+                                        引导（对象不一定专业，有可能比较“傻”比较“土”，注意考虑对象的接受程度）<br>
+                                        例如：销售人员可能真的听不懂“遍历一次”，客服人员可能真听不懂“O2O闭环”，<br>
+                                        4.6产品宣讲的目标<br>
+                                        获取认可与支持<br>
+                                        帮助其他团队更好的理解产品<br>
+                                        协助其他团队更好、更快、更协调的围绕产品开展工作<br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading5">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse5" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="h6 text-info">5、市场推广协助</span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading5">
+                                    <p>5.1对产品的宣传资料物料进行内容的把关<br>
+                                        （1）包括内容<br>
+                                        网站<br>
+                                        移动应用<br>
+                                        公共资料<br>
+                                        印刷品......<br>
+                                        （2）目的：确保产品调性与产品描述的一致性（注意是提出指导意见，但不是对别人的工作横加干涉）<br>
+                                        5.2主要针对<br>
+                                        市场、公共、运营、销售<br>
+                                        5.3案例<br>
+                                        有滋有味O2O——》指尖上的成都——》为吃货耍货而生<br>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="heading6">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse6" aria-expanded="false" aria-controls="collapseThree">
+                                            <span class="h6 text-info">6、产品推出后的管理与迭代</span>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading6">
+                                    <p>6.1主要工作<br>
+                                        运营数据的整理分析<br>
+                                        深入一线体验产品<br>
+                                        关注用户需求反馈<br>
+                                        持续与各部门保持协调沟通<br>
+                                        新版本迭代与优化<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="tab-pane fade" id="avgWage" role="tabpanel" aria-labelledby="avgWage-tab" >
+                    <div style="margin-top: 15px">
+                    一线城市平均薪资：12.8K<br>
+                    二线城市平均薪资：7.4K<br>
+                    </div>
+                </div>
+            </div>
+            <div style="padding: 20px">
+                是否选择该职业：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>
+                    <input type="radio" name="R" id="R1" value="o1">
+                    是
+                </label>
+                <label>
+                    <input type="radio" name="R" id="R2" value="o2">
+                    否
+                </label>
+                <div class="text-center">
+                    <button class="btn btn-info">
+                        确定
+                    </button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-info" href="02xuanzezhiye.html">
+                        返回
+                    </a>
+                </div>
+            </div>
+            <div class="fixed-bottom  fixdibu hidden-sm-up">
+                <a href="02faxianziwo.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-faxian" aria-hidden="true">
+                                <use xlink:href="#icon-faxian"></use>
+                            </svg>
+                        </span>
+                </a>
+                <a href="03guanliziwo.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-tubiaozhizuomoban" aria-hidden="true">
+                                <use xlink:href="#icon-tubiaozhizuomoban"></use>
+                            </svg>
+                        </span>
+                </a>
+                <a href="03xiaorizi.html">
+                            <span class="text-center div5">
+                                <svg class="icon icon-tianjia" aria-hidden="true">
+                                    <use xlink:href="#icon-tianjia"></use>
+                                </svg>
+                        </span>
+                </a>
+                <a href="04chengjiuziwo.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-fenxianglicaichengjiu" aria-hidden="true">
+                                <use xlink:href="#icon-fenxianglicaichengjiu"></use>
+                            </svg>
+                        </span>
+                </a>
+                <a href="01wode.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-wo" aria-hidden="true">
+                                <use xlink:href="#icon-wo"></use>
+                            </svg>
+                        </span>
+                </a>
+            </div>
+        </div>
+        <div class="col-xs-1 col-md-2"></div>
+    </div>
+</div>
+<script src="../cpnts/bootstrap4.0.0/js/bootstrap.min.js"></script>
+<script src="../fonts/icons/font_783350_3kbws5kmv3r/iconfont.js"></script>
+</body>
+</html>

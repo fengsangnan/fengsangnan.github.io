@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Jquery文字内容过多部分折叠</title>
+    <style>
+        .morecon{ cursor:pointer;}
+        .content .text{overflow: hidden;text-indent: 2em}
+    </style>
+    <script src="../cpnts/jquery/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="text">
+        <p>JQuery是继prototype之后又一个优秀的Javascript库。它是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+），jQuery2.0及后续版本将不再支持IE6/7/8浏览器。
+        <p>jQuery使用户能更方便地处理HTML（标准通用标记语言下的一个应用）、events、实现动画效果，并且方便地为网站提供AJAX交互。
+        <p>jQuery还有一个比较大的优势是，它的文档说明很全，而且各种应用也说得很详细，同时还有许多成熟的插件可供选择。jQuery能够使用户的html页面保持代码和html内容分离，也就是说，不用再在html里面插入一堆js来调用命令了，只需要定义id即可。
+    </div>
+</div>
+</body>
+</html>
+<script>
+    $(document).ready( function() {
+        $(".content .text").each(function(){
+            height=$(this).height();
+            if(height>30) {
+                $(this).css("height","80");
+                $(this).after("<p class=\"morecon\" >点开更多内容</p>");
+            }
+        });
+        $(".morecon").click(function(){
+            $(this).parent().children("div.text").css("height","auto");
+            $(this).css("display","none");
+        });
+    });
+</script>

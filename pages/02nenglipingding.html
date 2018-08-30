@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="GET">
+    <meta name="author" content="第五组">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="../favicon.ico">
+    <title>能力评定</title>
+    <link href="../cpnts/bootstrap4.0.0/css/bootstrap.css" rel="stylesheet">
+    <link href="../styles/02nenglipingding.css" rel="stylesheet">
+    <script src="../cpnts/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../cpnts/vue.js"></script>
+</head>
+<body>
+    <div class="container-fluid p60">
+        <div class="row row1 fixed-top">
+            <div class="col-12">
+                <!--“更多”导航栏-->
+                <h5 class="text-white text-center zi phonetop">能力评定</h5>
+            </div>
+        </div>
+
+       <!--第二行  已经掌握能力&未掌握能力-->
+
+        <div class="container-fluid p00" id="root">
+            <div class="row row3 mar50">
+                <div class="col-xs-1 col-md-2"></div>
+                <div class="col-xs-10 col-md-8 bg-white" >
+                    <div>
+                        <ul class="nav nav-tabs mar25" id="myTab" role="tablist">
+                            <li class="nav-item  tab1">
+                                <a class="nav-link active" id="got-tab" data-toggle="tab" href="#got" role="tab" aria-controls="got" aria-selected="true">已掌握的能力</a>
+                            </li>
+                            <li class="nav-item  tab1">
+                                <a class="nav-link" id="none-tab" data-toggle="tab" href="#none" role="tab" aria-controls="none" aria-selected="false">未掌握的能力</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content p40" id="myTabContent">
+                            <div class="tab-pane fade show active" id="got" role="tabpanel" aria-labelledby="got-tab">
+                                <span class="set">英语四级</span>
+                                <span class="set">html</span>
+                                <span class="set">java</span>
+                                <span class="set">管理学</span>
+                                <span class="set">运筹学</span>
+                            </div>
+                            <div class="tab-pane fade" id="none" role="tabpanel" aria-labelledby="none-tab">
+                                <span class="set">后台开发</span>
+                                <span class="set">数据库技术</span>
+                                <span class="set">jQuery</span>
+                                <span class="set">熟练使用Axure软件</span>
+                                <span class="set">沟通能力</span>
+                                <todo-item v-for="(item,index) of list"
+                                 :key="index"
+                                 :content="item"
+                                >
+                                </todo-item>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input  v-model="inputValue" type="text" class="form-control" id="zhiye" placeholder="请输入你想加强的能力" />
+                        <button @click="handleSubmit" class="input-group-addon btn btn-info btn-sm marf">添加</button>
+                    </div>
+                </div>
+                <div class="col-xs-1 col-md-2"></div>
+            </div>
+            <div class="row row4">
+                <div class="col-xs-1 col-md-2"></div>
+                <div class="col-xs-10 col-md-8">
+                    <div class="row bg-white p0">
+                        <div class="col-12 alert alert-info small" role="alert">根据你选择的职业推荐</div>
+                        <div v-if="show1" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">1</span> <span> 沟通能力</span>
+                        </div>
+                        <div v-if="show2" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">2</span> <span> 前端开发与设计</span>
+                        </div>
+                        <div v-if="show3" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">3</span> <span> 英语六级</span>
+                        </div>
+                        <div v-if="show4" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">4</span> <span> 计算机等级考试</span>
+                        </div>
+                        <div v-if="show5" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">5</span> <span> 雅思</span>
+                        </div>
+                        <div v-if="show6" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">6</span> <span> 托福</span>
+                        </div>
+                        <div v-if="show7" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">7</span> <span> C语言</span>
+                        </div>
+                        <div v-if="show8" @click="handleClick" class="col-6 col-md-3 mar">
+                            <span class="set1">8</span> <span> python</span>
+                        </div>
+                    </div>
+                    <div class="fixed-bottom  fixdibu hidden-sm-up">
+                        <a href="02faxianziwo.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-faxian" aria-hidden="true">
+                                <use xlink:href="#icon-faxian"></use>
+                            </svg>
+                        </span>
+                        </a>
+                        <a href="03guanliziwo.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-tubiaozhizuomoban" aria-hidden="true">
+                                <use xlink:href="#icon-tubiaozhizuomoban"></use>
+                            </svg>
+                        </span>
+                        </a>
+                        <a href="03xiaorizi.html">
+                            <span class="text-center div5">
+                                <svg class="icon icon-tianjia" aria-hidden="true">
+                                    <use xlink:href="#icon-tianjia"></use>
+                                </svg>
+                        </span>
+                        </a>
+                        <a href="04chengjiuziwo.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-fenxianglicaichengjiu" aria-hidden="true">
+                                <use xlink:href="#icon-fenxianglicaichengjiu"></use>
+                            </svg>
+                        </span>
+                        </a>
+                        <a href="01wode.html">
+                            <span class="text-center div5">
+                            <svg class="icon icon-wo" aria-hidden="true">
+                                <use xlink:href="#icon-wo"></use>
+                            </svg>
+                        </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-1 col-md-2"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/02nenglipingding.js"></script>
+<script src="../cpnts/bootstrap4.0.0/js/bootstrap.min.js"></script>
+<script src="../fonts/icons/font_783350_3kbws5kmv3r/iconfont.js"></script>
+</body>
+</html>
